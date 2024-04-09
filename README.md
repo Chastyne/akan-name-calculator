@@ -21,6 +21,9 @@ A web application that calculates the Akan name of a user based on their birthda
 - HTML
 - CSS
 - JavaScript
+  
+## Live Site
+The live site is hosted on GitHub Pages. You can access it here [(https://chastyne.github.io/akan-name-calculator/)]
 
 ## Contact Information
 For inquiries, please contact:
