@@ -19,6 +19,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         // Calculate day of the week (0 = Sunday, 1 = Monday, ..., 6 = Saturday)
         const dayOfWeek = birthDate.getDay();
+        //Validate the day of the month
+        if (dayOfMonth <= 0 || dayOfMonth > 31 || month <= 0 || month > 12) {
+            alert('Please enter a valid date and month.');
+            return;
+        }
 
         // Based on gender map day of the week to Akan name
         let akanName = '';
