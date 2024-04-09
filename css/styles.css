@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(228, 159, 228);
+    background-color: rgb(113, 63, 113);
 }
 .container {
     max-width: 600px;
@@ -29,7 +29,7 @@ select {
 }
 button {
     padding: 8px 20px;
-    background-color: #af4ca8;
+    background-color: rgb(113, 63, 113);
     color: white;
     border: none;
     border-radius: 5px;
