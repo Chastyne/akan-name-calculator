@@ -1,0 +1,35 @@
+body {
+    background-color: rgb(235, 200, 235);
+}
+.container {
+    max-width: 600px;
+    max-height: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color:rgb(228, 159, 228);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+form {
+    margin-bottom: 20px;
+}
+input[type="date"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 8px 20px;
+    background-color: #af4ca8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #ce7ccd;
+}
