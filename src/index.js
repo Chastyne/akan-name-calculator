@@ -30,28 +30,16 @@ document.addEventListener('DOMContentLoaded', function() {
         const dayOfWeek = ((CC / 4) - (2 * CC - 1) + (5 * YY / 4) + (26 * (MM + 1) / 10) + DD) % 7;
 
 
+        // Arrays to store male and female Akan Names
+        const akanNamesMale = ['Kwasi', 'Kwadwo', 'Kwabena', 'Kwaku', 'Yaw', 'Kofi', 'Kwame'];
+        const akanNamesFemale = ['Akosua', 'Adwoa', 'Abenaa', 'Akua', 'Yaa', 'Afua', 'Ama'];
+
         // Based on gender map day of the week to Akan name
         let akanName = '';
         if (gender === 'male') {
-            switch (Math.floor(dayOfWeek)) {
-                case 0: akanName = 'Kwasi'; break; // Sunday
-                case 1: akanName = 'Kwadwo'; break; // Monday
-                case 2: akanName = 'Kwabena'; break; // Tuesday
-                case 3: akanName = 'Kwaku'; break; // Wednesday
-                case 4: akanName = 'Yaw'; break; // Thursday
-                case 5: akanName = 'Kofi'; break; // Friday
-                case 6: akanName = 'Kwame'; break; // Saturday
-            }
+            akanName = akanNamesMale[Math.floor(dayOfWeek)];
         } else if (gender === 'female') {
-            switch (Math.floor(dayOfWeek)) {
-                case 0: akanName = 'Akosua'; break; // Sunday
-                case 1: akanName = 'Adwoa'; break; // Monday
-                case 2: akanName = 'Abenaa'; break; // Tuesday
-                case 3: akanName = 'Akua'; break; // Wednesday
-                case 4: akanName = 'Yaa'; break; // Thursday
-                case 5: akanName = 'Afua'; break; // Friday
-                case 6: akanName = 'Ama'; break; // Saturday
-            }
+            akanName = akanNamesFemale[Math.floor(dayOfWeek)];
         }
 
         // Display the Akan name
