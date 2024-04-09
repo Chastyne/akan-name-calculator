@@ -9,9 +9,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const resultContainer = document.getElementById('result');
 
         // Get input values
-        const birthDate = new Date(birthDateInput.value);
+        const birthDateStr = birthDateInput.value;
         const gender = genderSelect.value;
-        
+
         // Validate date format (DD/MM/YYYY)
         const dateRegex = /^(\d{2})\/(\d{2})\/(\d{4})$/;
         if (!dateRegex.test(birthDateStr)) {
@@ -32,10 +32,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const YY = year % 100;
         const MM = month;
         const DD = dayOfMonth;
-        
+
         const dayOfWeek = ((CC / 4) - (2 * CC - 1) + (5 * YY / 4) + (26 * (MM + 1) / 10) + DD) % 7;
 
-        // Arrays to store male and female Akan Names
+        // Arrays to store Akan names for male and female
         const akanNamesMale = ['Kwasi', 'Kwadwo', 'Kwabena', 'Kwaku', 'Yaw', 'Kofi', 'Kwame'];
         const akanNamesFemale = ['Akosua', 'Adwoa', 'Abenaa', 'Akua', 'Yaa', 'Afua', 'Ama'];
 
@@ -50,4 +50,4 @@ document.addEventListener('DOMContentLoaded', function() {
         // Display the Akan name
         resultContainer.textContent = `Your Akan name is ${akanName}.`;
     });
-});        
+});
