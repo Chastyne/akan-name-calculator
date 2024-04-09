@@ -27,4 +27,7 @@ For inquiries, please contact:
 - Email: ivy.okumu@student.moringaschool.com
 
 ## License and Copyright
+This project is licensed under the terms of the MIT License. See the [LICENSE](LICENSE) file for details.
+
+Copyright ©2024 Ivy Okumu.
 
