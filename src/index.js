@@ -12,23 +12,28 @@ document.addEventListener('DOMContentLoaded', function() {
         const birthDate = new Date(birthDateInput.value);
         const gender = genderSelect.value;
         
-       // Validate date and month
-        const dayOfMonth = birthDate.getDate();
-        const month = birthDate.getMonth() + 1; // Month is zero-based
+        // Validate date format (DD/MM/YYYY)
+        const dateRegex = /^(\d{2})\/(\d{2})\/(\d{4})$/;
+        if (!dateRegex.test(birthDateStr)) {
+            alert('Please enter a valid date in the format DD/MM/YYYY.');
+            return;
+        }
 
+        const [dayOfMonth, month, year] = birthDateStr.split('/').map(Number);
+
+        // Validate day and month ranges
         if (dayOfMonth <= 0 || dayOfMonth > 31 || month <= 0 || month > 12) {
-            alert('Please enter a valid date and month.');
+            alert('Please enter a valid day and month.');
             return;
         }
 
         // Calculate day of the week
-        const CC = parseInt(birthDate.getFullYear().toString().slice(0, 2));
-        const YY = parseInt(birthDate.getFullYear().toString().slice(2));
+        const CC = Math.floor(year / 100);
+        const YY = year % 100;
         const MM = month;
         const DD = dayOfMonth;
-
+        
         const dayOfWeek = ((CC / 4) - (2 * CC - 1) + (5 * YY / 4) + (26 * (MM + 1) / 10) + DD) % 7;
-
 
         // Arrays to store male and female Akan Names
         const akanNamesMale = ['Kwasi', 'Kwadwo', 'Kwabena', 'Kwaku', 'Yaw', 'Kofi', 'Kwame'];
